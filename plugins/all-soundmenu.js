@@ -202,6 +202,6 @@ await conn.sendMessage(m.chat, listMessage, { quoted: fkontak, mentions: await c
 handler.help = ['soundmenu']
 handler.tags = ['sound']
 handler.command = /^(soundmenu)/i
-handler.register = true
+handler.register = false
 
 export default handler
