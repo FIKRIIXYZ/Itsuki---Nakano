@@ -5,7 +5,7 @@ let handler = async (m, { conn, command }) => {
 	conn.sendButton(m.chat, 'Tch Dasar Sagne🥵', wm, await(await fetch(url)).buffer(), [['Next',`.${command}`]],m)
 }
 handler.command = /^(zettai)$/i
-handler.tags = ['nsfe']
+handler.tags = ['nsfw']
 handler.help = ['zettai']
 handler.limit = true
 
