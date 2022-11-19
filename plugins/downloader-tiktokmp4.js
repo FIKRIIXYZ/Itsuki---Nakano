@@ -1,27 +1,34 @@
-let fetch = require('node-fetch')
-let handler = async (m, { conn, args }) => {
-  if (!args[0]) throw 'Uhm...url nya mana?'
-let res = await fetch(API('lol', '/api/tiktok', { url: args[0] }, 'apikey'))
-    let json = await res.json()
-    
-    m.reply(wait)
-await conn.reply(m.chat, `Downloading media from Tiktok`, 0, {
-  contextInfo: { mentionedJid: [m.sender],
-    externalAdReply :{
-    mediaUrl: linkig,
-    mediaType: 2,
-    description: deslink , 
-    title: titlink,
-    body: wm, //`${fileSizeH}`,
-    thumbnail: await(await fetch(img)).buffer(),
-    sourceUrl: linkgc
-     }}
-  })
-let txt = `🚀 *Link:* ${await(await axios.get(`https://tinyurl.com/api-create.php?url=${args[0]}`)).data}` 
-    await conn.sendButtonVid(m.chat, json.result.link, txt, wm, `Audio`, `.gett ${args[0]}`, m)
+import fetch from 'node-fetch'
+import axios from 'axios'
+import { tiktok } from "social_media_downloader"
+let handler = async (m, { conn, usedPrefix, command, text, args }) => {
+if (!args[0]) throw 'Masukkan Link'
+try {
+let p = await tiktok(args[0])
+    if (!p.link) throw 'Can\'t download video!'
+    let cap = `*「 🇹 ᴛ ɪ ᴋ ᴛ ᴏ ᴋ 」*
+                 ████████▀▀▀████
+                 ████████────▀██
+                 ████████──█▄──█
+                 ███▀▀▀██──█████
+                 █▀──▄▄██──█████
+                 █──█████──█████
+                 █▄──▀▀▀──▄█████
+                 ███▄▄▄▄▄███████
+────────── ⇆ㅤ◁ㅤ ❚❚ㅤ ▷ㅤ↻ ──────────
+*Nickname:* ${p.dev}
+*Description:* ${p.description}
+*Url:* ${p.url}
+_© 𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝘽𝙮 𝐅𝐢𝐤𝐫𝐢𝐢_
+`.trim()
+conn.send2ButtonVid(m.chat, p.link, cap, author, `Donasi`, `.donasi`, `Audio`, `.tta ${args[0]}`, fakes, adReply)
+} catch (e) {
+    throw eror
+    }
 }
-handler.help = ['tiktok'].map(v => v + ' <url>')
+
+handler.help = ['tiktok', 'tiktok', 'tiktokdl'].map(v => v + ' <url>')
 handler.tags = ['downloader']
-handler.command = /^(tiktok|ttdl|tt|tiktokdl)$/i
+handler.command = /^(tik(tok)?(tok)?(dl)?)$/i
 
 export default handler
