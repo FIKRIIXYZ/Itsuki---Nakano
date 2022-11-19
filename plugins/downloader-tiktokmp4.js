@@ -1,22 +1,15 @@
-import axios from 'axios'
-let handler = async (m, { conn, args, usedPrefix, command }) => {
-    if (!args[0]) throw `contoh:\n ${usedPrefix}${command} https://www.tiktok.com/@omagadsus/video/7025456384175017243`
-    let res = (await axios.get(API('males', '/tiktok', { url: args[0] } ))).data;
-    if (res.status != 200) throw res.message;
-    if (!res) throw res.message;
-    
-    let result = `⟐⟞⟚⟝⟮ *Title:* ⟯⟞⟚⟝⟐
-┇⟣⟪ ${res.title} ⟫⟢
-▥ ━┉┄┄┈┈ ▢
-
-┇⟐⟞⟚⟝⟮ *Author* ⟯⟞⟚⟝⟐
-▥ ━┉┄┄┈┈ ▢
-${res.author}
-◈ ━┉┈┄┈┈ ►`
-    conn.sendButtonVid(m.chat, res.video, result, '_© Created by 𝑭𝒊𝒌𝒓𝒊𝒊', `Audio`, `.gettt ${args[0]}`, m)
+let fetch = require('node-fetch')
+let fs = require('fs')
+let handler = async(m, { conn, usedPrefix, text, command }) => {
+    if (!text) throw `Harap masukkan URL sebagai parameter.\n\nContoh: ${usedPrefix + command} https://vt.tiktok.com/ZSeSCAN1W/`
+    let res = await fetch(global.API('rey', '/api/download/tiktok', { url: text }, 'apikey'))
+    if (!res.ok) throw await `${res.status} ${res.statusText}`
+    let json = await res.json()
+    await conn.sendButtonVid(m.chat, json.result.nowatermark, 'Nih Kak', watermark, 'Thanks', `Thanks`, m)
 }
-handler.help = ['tiktok'].map(v => v + ' <url>')
+handler.command = /^tiktok$/i
 handler.tags = ['downloader']
-handler.command = /^(tiktok|ttdl|tt|tiktokdl)$/i
+handler.help = ['tiktok']
+handler.limit = true
 
 export default handler
