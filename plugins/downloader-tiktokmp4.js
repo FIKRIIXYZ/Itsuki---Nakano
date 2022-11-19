@@ -1,19 +1,24 @@
-import axios from 'axios'
-let handler = async (m, { conn, args, usedPrefix, command }) => {
-    if (!args[0]) throw `contoh:\n ${usedPrefix}${command} https://www.tiktok.com/@omagadsus/video/7025456384175017243`
-    let res = (await axios.get(API('rey', '/api/download/tiktok', { url: text }, 'apikey'))
-    if (res.status != 200) throw res.message;
-    if (!res) throw res.message;
+let fetch = require('node-fetch')
+let handler = async (m, { conn, args }) => {
+  if (!args[0]) throw 'Uhm...url nya mana?'
+let res = await fetch(API('lol', '/api/tiktok', { url: args[0] }, 'apikey'))
+    let json = await res.json()
     
-    let result = `⟐⟞⟚⟝⟮ *Title:* ⟯⟞⟚⟝⟐
-┇⟣⟪ ${res.title} ⟫⟢
-▥ ━┉┄┄┈┈ ▢
-
-┇⟐⟞⟚⟝⟮ *Author* ⟯⟞⟚⟝⟐
-▥ ━┉┄┄┈┈ ▢
-${res.author}
-◈ ━┉┈┄┈┈ ►`
-    conn.sendButtonVid(m.chat, res.video, result, '_© Created by Fikrii_', `Audio`, `.gettt ${args[0]}`, m)
+    m.reply(wait)
+await conn.reply(m.chat, `Downloading media from Tiktok`, 0, {
+  contextInfo: { mentionedJid: [m.sender],
+    externalAdReply :{
+    mediaUrl: linkig,
+    mediaType: 2,
+    description: deslink , 
+    title: titlink,
+    body: wm, //`${fileSizeH}`,
+    thumbnail: await(await fetch(img)).buffer(),
+    sourceUrl: linkgc
+     }}
+  })
+let txt = `🚀 *Link:* ${await(await axios.get(`https://tinyurl.com/api-create.php?url=${args[0]}`)).data}` 
+    await conn.sendButtonVid(m.chat, json.result.link, txt, wm, `Audio`, `.gett ${args[0]}`, m)
 }
 handler.help = ['tiktok'].map(v => v + ' <url>')
 handler.tags = ['downloader']
