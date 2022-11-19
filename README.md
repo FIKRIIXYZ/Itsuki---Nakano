@@ -1,7 +1,7 @@
 <p align="center">
     <img src="https://telegra.ph/file/4a26215054d01496712b2.jpg" width="100%" style="margin-left: auto;margin-right: auto;display: block;">
 </p>
-<h1 align="center">MINIMAL KALO NYOLONG VITUR KASIH CREDIT LAH DECKK
+<h1 align="center">MINIMAL KALO NYOLONG FITUR KASIH CREDIT LAH DECKK
 
 ## Itsuki - Nakano
 Cuma Benerin Beberapa Fitur yang Eror Dan Merubah Sedikit Tampilan Menu</h1>
