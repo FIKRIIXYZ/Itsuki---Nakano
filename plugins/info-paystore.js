@@ -59,7 +59,7 @@ let scnya = ` 𝑯𝒂𝒍𝒍𝒐 ${tag} 𝑴𝒂𝒖 𝑺𝒆𝒘𝒂 𝑩𝒐
 }
 handler.help = ['sewabot']
 handler.tags = ['info']
-handler.command = /^(sewa(bot)?
+handler.command = ['sewabot','sewa|bot']
 
 export default handler
 
