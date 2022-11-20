@@ -44,13 +44,13 @@ let scnya = ` 𝑯𝒂𝒍𝒍𝒐 ${tag} 𝑴𝒂𝒖 𝑺𝒆𝒘𝒂 𝑩𝒐
 ┊⫹⫺ 𝙋𝙚𝙧𝙢𝙖𝙣𝙚𝙣𝙩 𝟮𝟱𝙆
 ╰═┅═━––––––๑
 *⫹⫺ PAYMENT*
-*DANA: 082123019956*
-*GOPAY: 082123019956*
+*DANA: 083128555829*
+*GOPAY: 083128555829*
 📮 𝑺&𝑲
 🗣️: 𝑲𝒂𝒌, 𝑲𝒐𝒌 𝒉𝒂𝒓𝒈𝒂𝒏𝒚𝒂 𝒎𝒂𝒉𝒂𝒍 𝒃𝒂𝒏𝒈𝒆𝒕?
 💬: 𝑴𝒂𝒖 𝒕𝒂𝒘𝒂𝒓 𝒎𝒆𝒏𝒂𝒘𝒂𝒓? 𝒃𝒐𝒍𝒆𝒉, 𝒔𝒊𝒍𝒂𝒉𝒌𝒂𝒏 𝒄𝒉𝒂𝒕 𝒐𝒘𝒏𝒆𝒓 𝒂𝒋𝒂
 `
- conn.send2ButtonImg(m.chat, `https://telegra.ph/file/ca99960e961e46b14fc58.jpg`, scnya, footerny, 'Owner', '.owner','Menu', '.menu', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+ conn.send2ButtonImg(m.chat, `https://telegra.ph/file/b93564b61dbcf69f42496.jpg`, scnya, footerny, 'Owner', '.owner','Menu', '.menu', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
     mediaUrl: 'https://chat.whatsapp.com/DQImxkVI5Z84mUrNO5LzFx',
     mediaType: 2, 
     description: sgc,
