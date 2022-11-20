@@ -32,14 +32,12 @@ let handler = async (m, { conn, args, command }) => {
   let mentionedJid = [m.sender]
 let scnya = ` 𝑯𝒂𝒍𝒍𝒐 ${tag} 𝙈𝙖𝙪 𝘿𝙤𝙣𝙖𝙨𝙞 𝙔𝙖?`
     let footerny = `╭━━━━「 𝘿𝙤𝙣𝙖𝙨𝙞 」
-├ 𝙎𝘼𝙒𝙀𝙍𝙄𝘼
-│https://saweria.co/LorddShenn
 ├ 𝙋𝙪𝙡𝙨𝙖 𝘿𝙖𝙣𝙖 𝙂𝙤𝙥𝙖𝙮
-│𝟬𝟴𝟮𝟭𝟮𝟯𝟬𝟭𝟵𝟵𝟱𝟲
+│083128555829
 │𝙏𝙚𝙧𝙞𝙢𝙖𝙠𝙖𝙨𝙞𝙝 𝘽𝙪𝙖𝙩 𝙔𝙖𝙣𝙜 𝙎𝙪𝙙𝙖𝙝 𝘿𝙤𝙣𝙖𝙨𝙞 (◠‿◕)
 ╰──────
 `
- conn.send2ButtonImg(m.chat, `https://telegra.ph/file/ca99960e961e46b14fc58.jpg`, scnya, footerny, 'Owner', '.owner','Menu', '.menu', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+ conn.send2ButtonImg(m.chat, `https://telegra.ph/file/b93564b61dbcf69f42496.jpg`, scnya, footerny, 'Owner', '.owner','Menu', '.menu', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
     mediaUrl: 'https://chat.whatsapp.com/DQImxkVI5Z84mUrNO5LzFx',
     mediaType: 2, 
     description: sgc,
