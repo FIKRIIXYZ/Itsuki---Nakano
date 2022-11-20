@@ -8,7 +8,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     let result = `${res.title}
 *Author* ${res.author}
 *Type NoWatemark*`
-    conn.sendButtonVid(m.chat, res.video, result, '_© 𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝘽𝙮 𝐅𝐢𝐤𝐫𝐢𝐢__', `Audio`, `.tiktokmp3 ${args[0]}`, m)
+    conn.sendButtonVid(m.chat, res.video, result, '_© 𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝘽𝙮 𝐅𝐢𝐤𝐫𝐢𝐢__', `Thanks`, `thanks ${args[0]}`, m)
 }
 handler.help = ['tiktok'].map(v => v + ' <url>')
 handler.tags = ['downloader']
