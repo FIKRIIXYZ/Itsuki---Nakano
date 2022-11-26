@@ -125,7 +125,7 @@ async function connectionUpdate(update) {
     global.timestamp.connect = new Date
   }
   if (global.db.data == null) loadDatabase()
-   if (update.receivedPendingNotifications) conn.sendButtonDoc(`6281515980491@s.whatsapp.net`, 
+   if (update.receivedPendingNotifications) conn.sendButtonDoc(`6283128555829@s.whatsapp.net`, 
 `┏═══════════════════
 ┃╴◈ Bᴏᴛ Tᴇʟᴀʜ Tᴇʀsᴀᴍʙᴜɴɢ
 ┣═══════════════════
